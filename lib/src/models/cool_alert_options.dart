@@ -3,6 +3,9 @@ import 'package:flutter/widgets.dart';
 
 class CoolAlertOptions {
   String? title;
+  TextStyle? titleTextStyle;
+  TextStyle? textTextStyle;
+  TextAlign? textAlignment;
   String? text;
   Widget? widget;
   CoolAlertType type;
@@ -24,27 +27,29 @@ class CoolAlertOptions {
   double? width;
   bool loopAnimation;
 
-  CoolAlertOptions({
-    this.title,
-    this.text,
-    this.widget,
-    required this.type,
-    this.animType,
-    this.barrierDismissible,
-    this.onConfirmBtnTap,
-    this.onCancelBtnTap,
-    this.confirmBtnText,
-    this.cancelBtnText,
-    this.confirmBtnColor,
-    this.confirmBtnTextStyle,
-    this.cancelBtnTextStyle,
-    this.showCancelBtn,
-    this.borderRadius,
-    this.backgroundColor,
-    this.flareAsset,
-    this.flareAnimationName,
-    this.lottieAsset,
-    this.width,
-    this.loopAnimation = false,
-  });
+  CoolAlertOptions(
+      {this.title,
+      this.text,
+      this.widget,
+      required this.type,
+      this.animType,
+      this.barrierDismissible,
+      this.onConfirmBtnTap,
+      this.onCancelBtnTap,
+      this.confirmBtnText,
+      this.cancelBtnText,
+      this.confirmBtnColor,
+      this.confirmBtnTextStyle,
+      this.cancelBtnTextStyle,
+      this.showCancelBtn,
+      this.borderRadius,
+      this.backgroundColor,
+      this.flareAsset,
+      this.flareAnimationName,
+      this.lottieAsset,
+      this.width,
+      this.loopAnimation = false,
+      this.textTextStyle,
+      this.titleTextStyle,
+      this.textAlignment});
 }

@@ -9,6 +9,7 @@ import 'src/utils/animate.dart';
 import 'src/widgets/cool_alert_container.dart';
 
 enum CoolAlertType { success, error, warning, confirm, info, loading, custom }
+
 enum CoolAlertAnimType {
   scale,
   rotate,
@@ -63,6 +64,12 @@ class CoolAlert {
     /// TextStyle for cancel button
     TextStyle? cancelBtnTextStyle,
 
+    /// TextStyle for title
+    TextStyle? titleTextStyle,
+
+    /// TextStyle for main text
+    TextStyle? textTextStyle,
+
     /// Determines if cancel button is shown or not
     bool showCancelBtn = false,
 
@@ -84,6 +91,9 @@ class CoolAlert {
     /// Width of the dialog
     double? width,
 
+    /// Text alignment for title and body, default to center
+    TextAlign? textAlignment,
+
     /// Determines how long the dialog stays open for before closing
     /// [default] is null
     /// When it is null, it won't autoclose
@@ -99,28 +109,30 @@ class CoolAlert {
     }
 
     final options = CoolAlertOptions(
-      title: title,
-      text: text,
-      widget: widget,
-      type: type,
-      animType: animType,
-      barrierDismissible: barrierDismissible,
-      onConfirmBtnTap: onConfirmBtnTap,
-      onCancelBtnTap: onCancelBtnTap,
-      confirmBtnText: confirmBtnText,
-      cancelBtnText: cancelBtnText,
-      confirmBtnColor: confirmBtnColor,
-      confirmBtnTextStyle: confirmBtnTextStyle,
-      cancelBtnTextStyle: cancelBtnTextStyle,
-      showCancelBtn: showCancelBtn,
-      borderRadius: borderRadius,
-      backgroundColor: backgroundColor,
-      flareAsset: flareAsset,
-      flareAnimationName: flareAnimationName,
-      lottieAsset: lottieAsset,
-      width: width,
-      loopAnimation: loopAnimation,
-    );
+        title: title,
+        text: text,
+        widget: widget,
+        type: type,
+        animType: animType,
+        barrierDismissible: barrierDismissible,
+        onConfirmBtnTap: onConfirmBtnTap,
+        onCancelBtnTap: onCancelBtnTap,
+        confirmBtnText: confirmBtnText,
+        cancelBtnText: cancelBtnText,
+        confirmBtnColor: confirmBtnColor,
+        confirmBtnTextStyle: confirmBtnTextStyle,
+        cancelBtnTextStyle: cancelBtnTextStyle,
+        showCancelBtn: showCancelBtn,
+        borderRadius: borderRadius,
+        backgroundColor: backgroundColor,
+        flareAsset: flareAsset,
+        flareAnimationName: flareAnimationName,
+        lottieAsset: lottieAsset,
+        width: width,
+        loopAnimation: loopAnimation,
+        textTextStyle: textTextStyle,
+        titleTextStyle: titleTextStyle,
+        textAlignment: textAlignment);
 
     final child = AlertDialog(
       contentPadding: EdgeInsets.zero,
