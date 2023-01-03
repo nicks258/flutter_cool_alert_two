@@ -104,7 +104,8 @@ class CoolAlertContainer extends StatelessWidget {
                           1,
                         ),
                 )
-              : Lottie.asset(options!.lottieAsset!,repeat: options!.loopAnimation),
+              : Lottie.asset(options!.lottieAsset!,
+                  repeat: options!.loopAnimation),
         ),
       );
     }
@@ -131,7 +132,9 @@ class CoolAlertContainer extends StatelessWidget {
         visible: title != null,
         child: Text(
           '$title',
-          style: Theme.of(context).textTheme.headline6,
+          textAlign: options!.textAlignment ?? TextAlign.center,
+          style:
+              options!.titleTextStyle ?? Theme.of(context).textTheme.headline6,
         ),
       );
     }
@@ -149,7 +152,8 @@ class CoolAlertContainer extends StatelessWidget {
       }
       return Text(
         text ?? '',
-        textAlign: TextAlign.center,
+        textAlign: options!.textAlignment ?? TextAlign.center,
+        style: options!.titleTextStyle,
       );
     }
   }
