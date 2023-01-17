@@ -2,8 +2,9 @@ name: cool_alert_two
 description: A Flutter package to display animated alert dialogs such as
   success, error, warning, confirm or even a loading dialog.
 version: 0.0.1
-homepage: https://github.com/matwright/flutter_cool_alert.git
-
+homepage: https://github.com/matwright/flutter_cool_alert_two.git
+repository: https://github.com/matwright/flutter_cool_alert_two.git
+publish_to: https://pub.dev/packages/cool_alert_two
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
