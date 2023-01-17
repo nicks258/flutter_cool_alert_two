@@ -1,13 +1,18 @@
-# cool_alert
+# cool_alert_two
 
-A Flutter package to display animated alert dialogs
+A Flutter package to display animated alert dialogs.
+
+NOTE: this is a forked version of the original cool_alert plugin which was no longer being actively maintained at the time of writing!
+
+Cool Alert Two includes various bug fixes and improvements that I use in my own projects and which I am aiming to maintain as a public fork.
+Feel free to contribute!
 
 ## Usage
 
 To use this package, add cool_alert as a dependency in your pubspec.yaml file.
 And add this import to your file.
 
-import 'package:cool_alert/cool_alert.dart';
+import 'package:cool_alert_two/cool_alert.dart';
 
 ## Image
 ![Screenshot  Gif](screenshots/gif.gif)

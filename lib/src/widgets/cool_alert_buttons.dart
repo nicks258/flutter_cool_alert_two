@@ -1,5 +1,5 @@
-import 'package:cool_alert/cool_alert.dart';
-import 'package:cool_alert/src/models/cool_alert_options.dart';
+import 'package:cool_alert_two/cool_alert_two.dart';
+import 'package:cool_alert_two/src/models/cool_alert_options.dart';
 import 'package:flutter/material.dart';
 
 class CoolAlertButtons extends StatelessWidget {

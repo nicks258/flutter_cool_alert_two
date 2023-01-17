@@ -1,4 +1,4 @@
-import 'package:cool_alert/cool_alert.dart';
+import 'package:cool_alert_two/cool_alert_two.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

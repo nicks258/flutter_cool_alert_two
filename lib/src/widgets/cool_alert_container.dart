@@ -1,8 +1,8 @@
-import 'package:cool_alert/cool_alert.dart';
-import 'package:cool_alert/src/constants/images.dart';
-import 'package:cool_alert/src/models/cool_alert_options.dart';
-import 'package:cool_alert/src/utils/single_loop_controller.dart';
-import 'package:cool_alert/src/widgets/cool_alert_buttons.dart';
+import 'package:cool_alert_two/cool_alert_two.dart';
+import 'package:cool_alert_two/src/constants/images.dart';
+import 'package:cool_alert_two/src/models/cool_alert_options.dart';
+import 'package:cool_alert_two/src/utils/single_loop_controller.dart';
+import 'package:cool_alert_two/src/widgets/cool_alert_buttons.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
