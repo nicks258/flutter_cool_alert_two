@@ -13,7 +13,6 @@ dependencies:
     sdk: flutter
   flare_flutter: ^3.0.0
   vector_math: ^2.0.8
-  google_fonts: ^3.0.1
   lottie: ^2.2.0
 
 dev_dependencies:
