@@ -11,9 +11,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flare_flutter: ^3.0.0
   vector_math: ^2.0.8
   lottie: ^2.2.0
+  flare_flutter: ^3.0.2
 
 dev_dependencies:
   flutter_test:

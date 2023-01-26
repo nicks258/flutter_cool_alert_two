@@ -134,7 +134,7 @@ class CoolAlertContainer extends StatelessWidget {
           '$title',
           textAlign: options!.textAlignment ?? TextAlign.center,
           style:
-              options!.titleTextStyle ?? Theme.of(context).textTheme.headline6,
+              options!.titleTextStyle ?? Theme.of(context).textTheme.titleLarge,
         ),
       );
     }
