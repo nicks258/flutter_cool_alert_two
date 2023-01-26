@@ -2,10 +2,10 @@ import 'package:cool_alert_two/cool_alert_two.dart';
 import 'package:cool_alert_two/src/models/cool_alert_options.dart';
 import 'package:flutter/material.dart';
 
-class CoolAlertButtons extends StatelessWidget {
-  final CoolAlertOptions? options;
+class CoolAlertTwoButtons extends StatelessWidget {
+  final CoolAlertTwoOptions? options;
 
-  CoolAlertButtons({
+  CoolAlertTwoButtons({
     Key? key,
     this.options,
   }) : super(key: key);
@@ -26,7 +26,7 @@ class CoolAlertButtons extends StatelessWidget {
 
   Widget _okayBtn(context) {
     final showCancelBtn =
-        options!.type == CoolAlertType.confirm ? true : options!.showCancelBtn!;
+        options!.type == CoolAlertTwoType.confirm ? true : options!.showCancelBtn!;
 
     final _okayBtn = _buildButton(
       context: context,
@@ -44,7 +44,7 @@ class CoolAlertButtons extends StatelessWidget {
 
   Widget _cancelBtn(context) {
     final showCancelBtn =
-        options!.type == CoolAlertType.confirm ? true : options!.showCancelBtn!;
+        options!.type == CoolAlertTwoType.confirm ? true : options!.showCancelBtn!;
 
     final _cancelBtn = _buildButton(
       context: context,

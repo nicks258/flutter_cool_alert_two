@@ -1,15 +1,15 @@
 import 'package:cool_alert_two/cool_alert_two.dart';
 import 'package:flutter/widgets.dart';
 
-class CoolAlertOptions {
+class CoolAlertTwoOptions {
   String? title;
   TextStyle? titleTextStyle;
   TextStyle? textTextStyle;
   TextAlign? textAlignment;
   String? text;
   Widget? widget;
-  CoolAlertType type;
-  CoolAlertAnimType? animType;
+  CoolAlertTwoType type;
+  CoolAlertTwoAnimType? animType;
   bool? barrierDismissible = false;
   VoidCallback? onConfirmBtnTap;
   VoidCallback? onCancelBtnTap;
@@ -27,7 +27,7 @@ class CoolAlertOptions {
   double? width;
   bool loopAnimation;
 
-  CoolAlertOptions(
+  CoolAlertTwoOptions(
       {this.title,
       this.text,
       this.widget,

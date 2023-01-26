@@ -9,10 +9,10 @@ Feel free to contribute!
 
 ## Usage
 
-To use this package, add cool_alert as a dependency in your pubspec.yaml file.
+To use this package, add cool_alert_two as a dependency in your pubspec.yaml file.
 And add this import to your file.
 
-import 'package:cool_alert_two/cool_alert.dart';
+import 'package:cool_alert_two/cool_alert_two.dart';
 
 ## Image
 ![Screenshot  Gif](screenshots/gif.gif)
@@ -20,7 +20,7 @@ import 'package:cool_alert_two/cool_alert.dart';
 ### Example
 
 ```
-CoolAlert.show(
+CoolAlertTwo.show(
    context: context,
    type: CoolAlertType.success,
    text: "Your transaction was successful!",
@@ -28,7 +28,7 @@ CoolAlert.show(
 ```
 
 
-### CoolAlert Class
+### CoolAlertTwo Class
 
 | Attribute        | Data type           | Description                                                                                                                                                   |            Default Value            |
 |:----------------------|:-------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------:|

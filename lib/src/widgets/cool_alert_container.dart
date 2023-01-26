@@ -7,10 +7,10 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class CoolAlertContainer extends StatelessWidget {
-  final CoolAlertOptions? options;
+class CoolAlertTwoContainer extends StatelessWidget {
+  final CoolAlertTwoOptions? options;
 
-  const CoolAlertContainer({
+  const CoolAlertTwoContainer({
     Key? key,
     this.options,
   }) : super(key: key);
@@ -51,25 +51,25 @@ class CoolAlertContainer extends StatelessWidget {
   }
 
   Widget _buildHeader(context) {
-    if (options!.type == CoolAlertType.loading) {
+    if (options!.type == CoolAlertTwoType.loading) {
       return Container();
     } else {
       String? anim = AppAnim.success;
 
       switch (options!.type) {
-        case CoolAlertType.success:
+        case CoolAlertTwoType.success:
           anim = AppAnim.success;
           break;
-        case CoolAlertType.error:
+        case CoolAlertTwoType.error:
           anim = AppAnim.error;
           break;
-        case CoolAlertType.warning:
+        case CoolAlertTwoType.warning:
           anim = AppAnim.warning;
           break;
-        case CoolAlertType.confirm:
+        case CoolAlertTwoType.confirm:
           anim = AppAnim.info;
           break;
-        case CoolAlertType.info:
+        case CoolAlertTwoType.info:
           anim = AppAnim.info;
           break;
         default:
@@ -112,7 +112,7 @@ class CoolAlertContainer extends StatelessWidget {
   }
 
   Widget _buildTitle(context) {
-    if (options!.type == CoolAlertType.loading) {
+    if (options!.type == CoolAlertTwoType.loading) {
       return Padding(
         padding: const EdgeInsets.only(bottom: 0.0),
         child: Container(
@@ -141,11 +141,11 @@ class CoolAlertContainer extends StatelessWidget {
   }
 
   Widget _buildText(context) {
-    if (options!.text == null && options!.type != CoolAlertType.loading) {
+    if (options!.text == null && options!.type != CoolAlertTwoType.loading) {
       return Container();
     } else {
       String? text = '';
-      if (options!.type == CoolAlertType.loading) {
+      if (options!.type == CoolAlertTwoType.loading) {
         text = options!.text ?? 'Loading...';
       } else {
         text = options!.text;
@@ -159,11 +159,11 @@ class CoolAlertContainer extends StatelessWidget {
   }
 
   Widget? _buildWidget(context) {
-    if (options!.widget == null && options!.type != CoolAlertType.custom) {
+    if (options!.widget == null && options!.type != CoolAlertTwoType.custom) {
       return Container();
     } else {
       Widget widget = Container();
-      if (options!.type == CoolAlertType.custom) {
+      if (options!.type == CoolAlertTwoType.custom) {
         widget = options!.widget ?? widget;
       }
       return options!.widget;
@@ -171,10 +171,10 @@ class CoolAlertContainer extends StatelessWidget {
   }
 
   Widget _buildButtons() {
-    if (options!.type == CoolAlertType.loading) {
+    if (options!.type == CoolAlertTwoType.loading) {
       return Container();
     } else {
-      return CoolAlertButtons(
+      return CoolAlertTwoButtons(
         options: options,
       );
     }
@@ -182,19 +182,19 @@ class CoolAlertContainer extends StatelessWidget {
 
   String? _whatTitle() {
     switch (options!.type) {
-      case CoolAlertType.success:
+      case CoolAlertTwoType.success:
         return 'Success!!!';
-      case CoolAlertType.error:
+      case CoolAlertTwoType.error:
         return 'Error!!!';
-      case CoolAlertType.warning:
+      case CoolAlertTwoType.warning:
         return 'Warning!!!';
-      case CoolAlertType.confirm:
+      case CoolAlertTwoType.confirm:
         return 'Are you sure?';
-      case CoolAlertType.info:
+      case CoolAlertTwoType.info:
         return 'Info!';
-      case CoolAlertType.custom:
+      case CoolAlertTwoType.custom:
         return null;
-      case CoolAlertType.loading:
+      case CoolAlertTwoType.loading:
         return null;
       default:
         return null;

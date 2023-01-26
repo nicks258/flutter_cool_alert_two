@@ -33,9 +33,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     final successAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolAlertTwo.show(
           context: context,
-          type: CoolAlertType.success,
+          type: CoolAlertTwoType.success,
           text: 'Transaction completed successfully!',
           autoCloseDuration: Duration(seconds: 2),
         );
@@ -46,9 +46,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final errorAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolAlertTwo.show(
           context: context,
-          type: CoolAlertType.error,
+          type: CoolAlertTwoType.error,
           title: 'Oops...',
           text: 'Sorry, something went wrong',
           loopAnimation: false,
@@ -60,9 +60,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final warningAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolAlertTwo.show(
           context: context,
-          type: CoolAlertType.warning,
+          type: CoolAlertTwoType.warning,
           text: 'You just broke protocol',
         );
       },
@@ -72,9 +72,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final infoAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolAlertTwo.show(
           context: context,
-          type: CoolAlertType.info,
+          type: CoolAlertTwoType.info,
           text: 'Buy two, get one free',
         );
       },
@@ -84,9 +84,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final confirmAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolAlertTwo.show(
           context: context,
-          type: CoolAlertType.confirm,
+          type: CoolAlertTwoType.confirm,
           text: 'Do you want to logout',
           confirmBtnText: 'Yes',
           cancelBtnText: 'No',
@@ -99,9 +99,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final loadingAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolAlertTwo.show(
           context: context,
-          type: CoolAlertType.loading,
+          type: CoolAlertTwoType.loading,
         );
       },
       text: 'Loading',
@@ -111,9 +111,9 @@ class _MyHomePageState extends State<MyHomePage> {
     final customAlert = _buildButton(
       onTap: () {
         var _message = '';
-        CoolAlert.show(
+        CoolAlertTwo.show(
           context: context,
-          type: CoolAlertType.custom,
+          type: CoolAlertTwoType.custom,
           barrierDismissible: true,
           confirmBtnText: 'Save',
           widget: TextFormField(
@@ -129,18 +129,18 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           onConfirmBtnTap: () async {
             if (_message.length < 5) {
-              await CoolAlert.show(
+              await CoolAlertTwo.show(
                 context: context,
-                type: CoolAlertType.error,
+                type: CoolAlertTwoType.error,
                 text: 'Please input something',
               );
               return;
             }
             Navigator.pop(context);
             await Future.delayed(Duration(milliseconds: 1000));
-            await CoolAlert.show(
+            await CoolAlertTwo.show(
               context: context,
-              type: CoolAlertType.success,
+              type: CoolAlertTwoType.success,
               text: "Phone number '$_message' has been saved!.",
             );
           },

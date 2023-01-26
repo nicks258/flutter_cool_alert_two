@@ -1,4 +1,4 @@
-library cool_alert;
+library cool_alert_two;
 
 import 'dart:async';
 
@@ -8,9 +8,9 @@ import 'src/models/cool_alert_options.dart';
 import 'src/utils/animate.dart';
 import 'src/widgets/cool_alert_container.dart';
 
-enum CoolAlertType { success, error, warning, confirm, info, loading, custom }
+enum CoolAlertTwoType { success, error, warning, confirm, info, loading, custom }
 
-enum CoolAlertAnimType {
+enum CoolAlertTwoAnimType {
   scale,
   rotate,
   slideInDown,
@@ -19,8 +19,8 @@ enum CoolAlertAnimType {
   slideInRight,
 }
 
-/// CoolAlert.
-class CoolAlert {
+/// CoolAlertTwo.
+class CoolAlertTwo {
   static Future show({
     /// BuildContext
     required BuildContext context,
@@ -35,10 +35,10 @@ class CoolAlert {
     Widget? widget,
 
     // Alert type [success, error, warning, confirm, info, loading, custom]
-    required CoolAlertType type,
+    required CoolAlertTwoType type,
 
     // Animation type  [scale, rotate, slideInDown, slideInUp, slideInLeft, slideInRight]
-    CoolAlertAnimType animType = CoolAlertAnimType.scale,
+    CoolAlertTwoAnimType animType = CoolAlertTwoAnimType.scale,
 
     /// Barrier Dissmisable
     bool barrierDismissible = true,
@@ -108,7 +108,7 @@ class CoolAlert {
       });
     }
 
-    final options = CoolAlertOptions(
+    final options = CoolAlertTwoOptions(
         title: title,
         text: text,
         widget: widget,
@@ -139,7 +139,7 @@ class CoolAlert {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(borderRadius),
       ),
-      content: CoolAlertContainer(
+      content: CoolAlertTwoContainer(
         options: options,
       ),
     );
@@ -148,22 +148,22 @@ class CoolAlert {
       barrierColor: Colors.black.withOpacity(0.5),
       transitionBuilder: (context, anim1, __, widget) {
         switch (animType) {
-          case CoolAlertAnimType.scale:
+          case CoolAlertTwoAnimType.scale:
             return Animate.scale(child: child, animation: anim1);
 
-          case CoolAlertAnimType.rotate:
+          case CoolAlertTwoAnimType.rotate:
             return Animate.rotate(child: child, animation: anim1);
 
-          case CoolAlertAnimType.slideInDown:
+          case CoolAlertTwoAnimType.slideInDown:
             return Animate.slideInDown(child: child, animation: anim1);
 
-          case CoolAlertAnimType.slideInUp:
+          case CoolAlertTwoAnimType.slideInUp:
             return Animate.slideInUp(child: child, animation: anim1);
 
-          case CoolAlertAnimType.slideInLeft:
+          case CoolAlertTwoAnimType.slideInLeft:
             return Animate.slideInLeft(child: child, animation: anim1);
 
-          case CoolAlertAnimType.slideInRight:
+          case CoolAlertTwoAnimType.slideInRight:
             return Animate.slideInRight(child: child, animation: anim1);
 
           default:
