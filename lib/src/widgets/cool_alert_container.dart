@@ -153,7 +153,7 @@ class CoolAlertTwoContainer extends StatelessWidget {
       return Text(
         text ?? '',
         textAlign: options!.textAlignment ?? TextAlign.center,
-        style: options!.titleTextStyle,
+        style: options!.textTextStyle,
       );
     }
   }
